@@ -1,6 +1,6 @@
 {
- "name": "TeleBot - UserBot",
- "description": "An advanced Telethon Userbot, from @TeleBotSupport",
+ "name": "Parallel UserBot",
+ "description": "An advanced Telegram Userbot, based on Telethon, from @ParallelSupport",
  "logo": "https://telegra.ph/file/34b810002e7a3ee86a21e.png",
  "keywords": [
   "telegram",
@@ -9,8 +9,7 @@
   "modular",
   "productivity"
  ],
- "repository": "https://github.com/xditya/TeleBot/",
- "website": "https://xditya.gitbook.io/telebot/",
+ "repository": "https://github.com/sohag02/Parallel/",
  "success_url": "https://t.me/TeleBotHelp/13",
  "stack": "container",
  "env": {
