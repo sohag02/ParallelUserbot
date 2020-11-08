@@ -31,7 +31,7 @@ PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (
     PMPERMIT_PIC
     if PMPERMIT_PIC
-    else "https://telegra.ph/file/572a121f67b75f97c7a6a.jpg"
+    else "https://telegra.ph/file/f7514d0d77a7a6ab73afc.jpg"
 )
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
@@ -40,12 +40,12 @@ LOG_GP = Var.PRIVATE_GROUP_ID
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else "`TeleBot PM security! Please wait for me to approve you. 😊"
+    else "`This is Parallel Userbot PM security! Please wait for me to approve you. 😊"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Parallel User"
 USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
 USER_BOT_NO_WARN = (
-    f"**PM Security ~ TeleBot**\n\nNice to see you here, but  "
+    f"**PM Security ~ Parallel**\n\nNice to see you here, but  "
     "[{}](tg://user?id={}) is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n"
     "\nPlease choose why you are here, from the available options\n\n            ~ Thank You."
@@ -63,7 +63,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             thelink = f"https://t.me/{yourbot}?start=logs"
             result = builder.article(
                 title="Help-Menu",
-                text=f"This is the help menu for {DEFAULTUSER}\n\nProvided by [TeleBot](https://github.com/xditya/TeleBot)",
+                text=f"This is the help menu for {DEFAULTUSER}\n\nProvided by [Parallel Userbot](https://github.com/sohag02/ParallelUserbot)",
                 buttons=[
                     [custom.Button.inline("All commands", data="helpmenu")],
                     [
@@ -71,7 +71,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                         custom.Button.inline("Close", data="close"),
                         custom.Button.inline("Stats", data="statcheck"),
                     ],
-                    [Button.url("Support", "t.me/TeleBotSupport")],
+                    [Button.url("Support", "t.me/ParallelSupport")],
                 ],
                 link_preview=False,
             )
@@ -80,8 +80,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             buttons = paginate_help(0, CMD_LIST, "helpme")
             x = len(CMD_LIST)
             result = builder.article(
-                "© TeleBot Help",
-                text=f"`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**[TeleBot](https://xditya.gitbook.io/telebot/)**\n\nCurrently Loaded Plugins: {x}",
+                "© Parallel Help",
+                text=f"`Parallel Help menu for {DEFAULTUSER}/n/n `**[Parallel Userbot](https://github.com/sohag02/ParallelUserbot)**\n\nCurrently Loaded Plugins: {x}",
                 buttons=buttons,
                 link_preview=False,
             )
@@ -121,27 +121,27 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"TeleBot - Telegram Userbot.",
+                text=f"Parallel - Telegram Userbot.",
                 buttons=[
                     [
-                        Button.url("Repo", "https://github.com/xditya/TeleBot"),
+                        Button.url("Repo", "https://github.com/sohag02/ParallelUserbot"),
                         Button.url(
                             "Deploy",
                             "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot&template=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot",
                         ),
                     ],
-                    [Button.url("Support", "https://t.me/TeleBotSupport")],
+                    [Button.url("Support", "https://t.me/ParallelSupport")],
                 ],
             )
         else:
             result = builder.article(
                 "Source Code",
-                text="**Welcome to TeleBot**\n\n`Click below buttons for more`",
+                text="**Welcome to Parallel Userbot**\n\n`Click below buttons for more`",
                 buttons=[
-                    [custom.Button.url("Creator👨‍🦱", "https://t.me/its_xditya")],
+                    [custom.Button.url("Creator👨‍🦱", "https://t.me/")],
                     [
                         custom.Button.url(
-                            "👨‍💻Source Code‍💻", "https://github.com/xditya/TeleBot"
+                            "👨‍💻Source Code‍💻", "https://github.com/sohag02/ParallelUserbot"
                         ),
                         custom.Button.url(
                             "Deploy 🌀",
@@ -150,7 +150,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     ],
                     [
                         custom.Button.url(
-                            "Updates and Support Group↗️", "https://t.me/TeleBotSupport"
+                            "Updates and Support Group↗️", "https://t.me/ParallelSupport"
                         )
                     ],
                 ],
@@ -171,7 +171,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.edit(buttons=buttons)
         else:
             reply_pop_up_alert = (
-                "Please get your own Userbot from @TeleBotHelp , and don't use mine!"
+                "Please get your own Parallel Userbot, and don't use mine!"
             )
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -187,7 +187,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await helpermenu[0].click(event.chat_id)
         else:
             reply_pop_up_alert = (
-                "Please get your own Userbot from @TeleBotHelp , and don't use mine!"
+                "Please get your own Parallel Userbot , and don't use mine!"
             )
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -198,7 +198,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"This is the PM Security for {DEFAULTUSER} to keep away spammers and retards.\n\nProtected by [TeleBot](t.me/TeleBotSupport)"
+                f"This is the PM Security for {DEFAULTUSER} to keep away spammers and retards.\n\nProtected by [Parallel Userbot](t.me/ParallelSupport)"
             )
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"req")))
@@ -301,7 +301,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
+            reply_pop_up_alert = "Please get your own Parallel Userbot, and don't use mine!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(
@@ -333,7 +333,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 halps = "Do .help {} to get the list of commands.".format(plugin_name)
                 await event.answer(halps, cache_time=0, alert=True)
         else:
-            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
+            reply_pop_up_alert = "Please get your own Parallel Userbot, and don't use mine!"
 
 
 def paginate_help(page_number, loaded_plugins, prefix):
